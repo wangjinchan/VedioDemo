@@ -8,6 +8,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <include layout="@layout/title"/>
 
     <VideoView
         android:id="@+id/video_net"
