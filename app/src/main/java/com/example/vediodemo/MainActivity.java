@@ -5,19 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 import android.widget.VideoView;
 import android.widget.MediaController;
-
 import java.util.Objects;
-
-//播放网络视频
 public class MainActivity extends AppCompatActivity {
 
     VideoView mVideoNet;
-    Button mBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,13 +19,7 @@ public class MainActivity extends AppCompatActivity {
         }
         setContentView(R.layout.activity_main);
         mVideoNet=findViewById(R.id.video_net);
-        mBack=findViewById(R.id.titleBack);
-        mBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+
         initNetVideo();
     }
 
